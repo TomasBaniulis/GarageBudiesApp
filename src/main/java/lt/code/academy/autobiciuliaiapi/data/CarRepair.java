@@ -1,0 +1,25 @@
+package lt.code.academy.autobiciuliaiapi.data;
+
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.bson.types.ObjectId;
+
+import java.time.LocalDate;
+import java.util.UUID;
+@NoArgsConstructor
+@Setter
+@Getter
+public class CarRepair {
+    UUID id;
+    RepairType repairType;
+    ObjectId carRepairShopId;
+    UUID workPlaceId;
+    LocalDate date;
+    Integer mileage;
+    String warranty;
+    String repairComment;
+
+
+
+}
