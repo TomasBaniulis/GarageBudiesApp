@@ -1,4 +1,4 @@
-package lt.code.academy.autobiciuliaiapi.users.dto;
+package lt.code.academy.autobiciuliaiapi.users.document;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -8,6 +8,7 @@ import lt.code.academy.autobiciuliaiapi.garage.dto.Garage;
 import lt.code.academy.autobiciuliaiapi.data.Address;
 import lt.code.academy.autobiciuliaiapi.data.Car;
 import org.bson.types.ObjectId;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Set;
 
@@ -15,27 +16,19 @@ import java.util.Set;
 @AllArgsConstructor
 @Setter
 @Getter
-public class User {
+@Document(collection = "Users")
+public class UserDocument {
     private ObjectId id;
     private String name;
     private String surname;
     private String email;
     private String password;
-    private String repeatPassword;
     private String phoneNumber;
-    private Set<Address> addresses;
+    private Set <Address> addresses;
     private Set<Car> cars;
     private Set<Garage> favouriteGarages;
 
-    public User(ObjectId id, String name, String surname, String email, String password, String phoneNumber, Set<Address> addresses, Set<Car> cars, Set<Garage> favouriteGarages) {
-        this.id = id;
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.password = password;
-        this.phoneNumber = phoneNumber;
-        this.addresses = addresses;
-        this.cars = cars;
-        this.favouriteGarages = favouriteGarages;
-    }
+
+
+
 }

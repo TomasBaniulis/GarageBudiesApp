@@ -1,4 +1,4 @@
-package lt.code.academy.autobiciuliaiapi.carServices.dto;
+package lt.code.academy.autobiciuliaiapi.garage.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,12 +19,13 @@ public class Garage {
 
     private ObjectId id;
     private String companyCode;
-    private String VatCode;
+    private String vatCode;
     private String companyName;
     private String email;
-    private List<Address> addresses;
+    private Set<Address> addresses;
     private Set<RepairType> companyProfile;
     private String companyDescription;
+    private Set<Evaluation> evaluations;
     private Double evaluation;
     private Set<User> customers;
     private Set <WorkPlace> workPlaces;
