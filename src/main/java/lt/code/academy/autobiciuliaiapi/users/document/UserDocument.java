@@ -31,7 +31,7 @@ public class UserDocument {
     private Set<Garage> favouriteGarages;
     private Set<RepairBooking> userBookings;
 
-    public UserDocument convert (User user){
+    public static UserDocument convert (User user){
         return new UserDocument(user.getId(),
                 user.getName(),
                 user.getSurname(),

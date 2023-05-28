@@ -5,7 +5,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.bson.types.ObjectId;
 
-import java.util.UUID;
 @NoArgsConstructor
 @Setter
 @Getter

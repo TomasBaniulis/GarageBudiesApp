@@ -35,7 +35,7 @@ public class GarageDocument {
     private Set<CustomerComment> customerComments;
     private Set<CarRepair> allRepair;
 
-    public GarageDocument convert (Garage garage){
+    public static GarageDocument convert (Garage garage){
         return new GarageDocument(garage.getId(),
                 garage.getCompanyCode(),
                 garage.getVatCode(),

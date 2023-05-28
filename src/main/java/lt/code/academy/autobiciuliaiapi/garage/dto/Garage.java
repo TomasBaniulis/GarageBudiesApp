@@ -55,7 +55,7 @@ public class Garage {
         this.allRepairs = allRepairs;
     }
 
-    public Garage convert (GarageDocument garageDocument){
+    public static Garage convert (GarageDocument garageDocument){
         return new Garage(garageDocument.getId(),
                 garageDocument.getCompanyCode(),
                 garageDocument.getVatCode(),

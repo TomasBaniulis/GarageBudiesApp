@@ -43,7 +43,7 @@ public class User {
         this.userBookings = userBookings;
     }
 
-    public User convert (UserDocument userDocument){
+    public static User convert (UserDocument userDocument){
         return new User(userDocument.getId(),
                 userDocument.getName(),
                 userDocument.getSurname(),
