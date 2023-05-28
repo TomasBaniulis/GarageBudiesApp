@@ -1,15 +1,14 @@
-package lt.code.academy.autobiciuliaiapi.garage.dto;
+package lt.code.academy.autobiciuliaiapi.garages.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lt.code.academy.autobiciuliaiapi.data.*;
-import lt.code.academy.autobiciuliaiapi.garage.document.GarageDocument;
+import lt.code.academy.autobiciuliaiapi.garages.document.GarageDocument;
 import lt.code.academy.autobiciuliaiapi.users.dto.User;
 import org.bson.types.ObjectId;
 
-import java.util.List;
 import java.util.Set;
 
 @NoArgsConstructor

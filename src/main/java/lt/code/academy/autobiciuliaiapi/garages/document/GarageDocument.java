@@ -1,11 +1,11 @@
-package lt.code.academy.autobiciuliaiapi.garage.document;
+package lt.code.academy.autobiciuliaiapi.garages.document;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lt.code.academy.autobiciuliaiapi.data.*;
-import lt.code.academy.autobiciuliaiapi.garage.dto.Garage;
+import lt.code.academy.autobiciuliaiapi.garages.dto.Garage;
 import lt.code.academy.autobiciuliaiapi.users.dto.User;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;

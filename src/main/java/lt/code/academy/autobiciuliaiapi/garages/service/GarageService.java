@@ -1,9 +1,9 @@
-package lt.code.academy.autobiciuliaiapi.garage.service;
+package lt.code.academy.autobiciuliaiapi.garages.service;
 
 import lombok.AllArgsConstructor;
-import lt.code.academy.autobiciuliaiapi.garage.document.GarageDocument;
-import lt.code.academy.autobiciuliaiapi.garage.dto.Garage;
-import lt.code.academy.autobiciuliaiapi.garage.repository.GarageRepository;
+import lt.code.academy.autobiciuliaiapi.garages.document.GarageDocument;
+import lt.code.academy.autobiciuliaiapi.garages.dto.Garage;
+import lt.code.academy.autobiciuliaiapi.garages.repository.GarageRepository;
 import org.bson.types.ObjectId;
 import org.springframework.stereotype.Service;
 

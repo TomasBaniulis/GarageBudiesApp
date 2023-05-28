@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lt.code.academy.autobiciuliaiapi.data.RepairBooking;
-import lt.code.academy.autobiciuliaiapi.garage.dto.Garage;
+import lt.code.academy.autobiciuliaiapi.garages.dto.Garage;
 import lt.code.academy.autobiciuliaiapi.data.Address;
 import lt.code.academy.autobiciuliaiapi.data.Car;
 import lt.code.academy.autobiciuliaiapi.users.dto.User;
