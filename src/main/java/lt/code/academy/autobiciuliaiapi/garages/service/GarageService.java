@@ -33,6 +33,11 @@ public class GarageService {
     }
 
     public void createGarage (Garage garage){
+        getGarageById(garage.getId());
+        garageRepository.save(GarageDocument.convert(garage));
+    }
+
+    public void updateGarage (Garage garage){
         garageRepository.save(GarageDocument.convert(garage));
     }
 

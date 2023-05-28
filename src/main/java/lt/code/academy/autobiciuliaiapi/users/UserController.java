@@ -3,14 +3,13 @@ package lt.code.academy.autobiciuliaiapi.users;
 import lombok.AllArgsConstructor;
 import static lt.code.academy.autobiciuliaiapi.EndPoint.*;
 
+import lt.code.academy.autobiciuliaiapi.EndPoint;
 import lt.code.academy.autobiciuliaiapi.users.dto.User;
 import lt.code.academy.autobiciuliaiapi.users.service.UserService;
 import org.bson.types.ObjectId;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,12 +21,32 @@ public class UserController {
     private final UserService userService;
     @GetMapping(value = USER, produces = MediaType.APPLICATION_JSON_VALUE)
     public User ShowUser (@PathVariable(userId) ObjectId id){
+
         return userService.showUserById(id);
     }
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
     public List<User> showAllUsers(){
-        return userService.showAllUsers();
+        return userService.showAllUsers();}
+    @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.CREATED)
+    public void createNewUser(User user){
+        userService.createUser(user);
     }
+    @PutMapping(value = USER, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    public void updateUser(@RequestBody User user, @PathVariable(userId) ObjectId id){
+        user.setId(id);
+        userService.updateUser(user);
+    }
+
+    @DeleteMapping(value = USER,consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteUser (@PathVariable(userId) ObjectId id){
+        userService.deleteUser(id);
+    }
+
+
+
 
 
 
