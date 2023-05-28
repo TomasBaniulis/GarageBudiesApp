@@ -3,6 +3,7 @@ package lt.code.academy.autobiciuliaiapi.data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.bson.types.ObjectId;
 
 import java.time.LocalDate;
 import java.util.Set;
@@ -11,7 +12,7 @@ import java.util.UUID;
 @Setter
 @Getter
 public class Car {
-    private UUID id;
+    private ObjectId id;
     private String vinCode;
     private String manufacturer;
     private String model;

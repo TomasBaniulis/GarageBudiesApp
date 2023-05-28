@@ -4,9 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lt.code.academy.autobiciuliaiapi.data.RepairBooking;
 import lt.code.academy.autobiciuliaiapi.garage.dto.Garage;
 import lt.code.academy.autobiciuliaiapi.data.Address;
 import lt.code.academy.autobiciuliaiapi.data.Car;
+import lt.code.academy.autobiciuliaiapi.users.document.UserDocument;
 import org.bson.types.ObjectId;
 
 import java.util.Set;
@@ -26,8 +28,9 @@ public class User {
     private Set<Address> addresses;
     private Set<Car> cars;
     private Set<Garage> favouriteGarages;
+    private Set<RepairBooking> userBookings;
 
-    public User(ObjectId id, String name, String surname, String email, String password, String phoneNumber, Set<Address> addresses, Set<Car> cars, Set<Garage> favouriteGarages) {
+    public User(ObjectId id, String name, String surname, String email, String password, String phoneNumber, Set<Address> addresses, Set<Car> cars, Set<Garage> favouriteGarages, Set<RepairBooking> userBookings) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -37,5 +40,19 @@ public class User {
         this.addresses = addresses;
         this.cars = cars;
         this.favouriteGarages = favouriteGarages;
+        this.userBookings = userBookings;
+    }
+
+    public User convert (UserDocument userDocument){
+        return new User(userDocument.getId(),
+                userDocument.getName(),
+                userDocument.getSurname(),
+                userDocument.getEmail(),
+                userDocument.getPassword(),
+                userDocument.getPhoneNumber(),
+                userDocument.getAddresses(),
+                userDocument.getCars(),
+                userDocument.getFavouriteGarages(),
+                userDocument.getUserBookings());
     }
 }

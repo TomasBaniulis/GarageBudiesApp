@@ -11,7 +11,7 @@ import java.util.UUID;
 @Setter
 @Getter
 public class CustomerComment {
-    private UUID id;
+    private ObjectId id;
     private String reviewText;
     private ObjectId userId;
     private LocalDate reviewDate;

@@ -11,7 +11,7 @@ import java.util.UUID;
 @Setter
 @Getter
 public class CarRepair {
-    UUID id;
+    ObjectId id;
     RepairType repairType;
     ObjectId carRepairShopId;
     UUID workPlaceId;

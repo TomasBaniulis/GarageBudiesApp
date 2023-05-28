@@ -14,7 +14,7 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Evaluation {
 
-    private UUID id;
+    private ObjectId id;
     private Integer evaluation ;
     private ObjectId userId;
     private LocalDate date;

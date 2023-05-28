@@ -4,9 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lt.code.academy.autobiciuliaiapi.data.RepairBooking;
 import lt.code.academy.autobiciuliaiapi.garage.dto.Garage;
 import lt.code.academy.autobiciuliaiapi.data.Address;
 import lt.code.academy.autobiciuliaiapi.data.Car;
+import lt.code.academy.autobiciuliaiapi.users.dto.User;
 import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -27,6 +29,20 @@ public class UserDocument {
     private Set <Address> addresses;
     private Set<Car> cars;
     private Set<Garage> favouriteGarages;
+    private Set<RepairBooking> userBookings;
+
+    public UserDocument convert (User user){
+        return new UserDocument(user.getId(),
+                user.getName(),
+                user.getSurname(),
+                user.getEmail(),
+                user.getPassword(),
+                user.getPhoneNumber(),
+                user.getAddresses(),
+                user.getCars(),
+                user.getFavouriteGarages(),
+                user.getUserBookings());
+    }
 
 
 
