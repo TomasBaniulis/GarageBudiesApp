@@ -25,19 +25,19 @@ public class User {
     private String password;
     private String repeatPassword;
     private String phoneNumber;
-    private Set<Address> addresses;
+    private Address address;
     private Set<Car> cars;
     private Set<Garage> favouriteGarages;
     private Set<RepairBooking> userBookings;
 
-    public User(ObjectId id, String name, String surname, String email, String password, String phoneNumber, Set<Address> addresses, Set<Car> cars, Set<Garage> favouriteGarages, Set<RepairBooking> userBookings) {
+    public User(ObjectId id, String name, String surname, String email, String password, String phoneNumber, Address address, Set<Car> cars, Set<Garage> favouriteGarages, Set<RepairBooking> userBookings) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
         this.phoneNumber = phoneNumber;
-        this.addresses = addresses;
+        this.address = address;
         this.cars = cars;
         this.favouriteGarages = favouriteGarages;
         this.userBookings = userBookings;
@@ -50,7 +50,7 @@ public class User {
                 userDocument.getEmail(),
                 userDocument.getPassword(),
                 userDocument.getPhoneNumber(),
-                userDocument.getAddresses(),
+                userDocument.getAddress(),
                 userDocument.getCars(),
                 userDocument.getFavouriteGarages(),
                 userDocument.getUserBookings());

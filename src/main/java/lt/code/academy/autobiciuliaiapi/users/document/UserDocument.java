@@ -26,7 +26,7 @@ public class UserDocument {
     private String email;
     private String password;
     private String phoneNumber;
-    private Set <Address> addresses;
+    private Address address;
     private Set<Car> cars;
     private Set<Garage> favouriteGarages;
     private Set<RepairBooking> userBookings;
@@ -38,7 +38,7 @@ public class UserDocument {
                 user.getEmail(),
                 user.getPassword(),
                 user.getPhoneNumber(),
-                user.getAddresses(),
+                user.getAddress(),
                 user.getCars(),
                 user.getFavouriteGarages(),
                 user.getUserBookings());
